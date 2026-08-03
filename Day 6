@@ -1,0 +1,84 @@
+//-------------------------------------------------------Reverse the Number------------------------------------------------------------------
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d,ans=0;
+        while(n!=0)
+        {
+            d=n%10;
+            ans=ans*10+d;
+            n=n/10;
+        }
+        System.out.println("Reverse number " +ans);
+    }
+}
+
+//--------------------------------------------------------------Count the Numbers--------------------------------------------------------
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int c=0;
+        while(n!=0)
+        {
+            n=n/10;
+            c++;
+        }
+        System.out.println("No of digits " +c);
+    }
+}
+//---------------------------------------------------Parendromo Number--------------------------------------------------------------
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int temp=n,d,rev=0;
+        while(n!=0)
+        {
+            d=n%10;
+            rev = rev*10 + d;
+            n=n/10;
+        }
+        if(temp==rev)
+        System.out.print("Palindrome Number");
+        else
+        System.out.print("Not a Palindrome Number");
+    }
+}
+//---------------------------------------------Reverse using RIght Side Formation------------------------------------------------------------
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int d;
+        while(n!=0)
+        {
+            d=n%10;
+            System.out.print(d);
+            n = n/10;
+        }
+    }
+}
+//--------------------------------------------------Prime Number Count-----------------------------------------------------
+import java.util.*;
+public class Main{
+    public static void main(String[]args){
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        int count = 0;
+        while(n!=0)
+        {
+            int digit = n%10;
+            if(digit==2||digit==3||digit==5||digit==7){
+                count++;
+            }
+            n=n/10;
+        }
+        System.out.print("Prime digit count= " +count);
+    }
+}
