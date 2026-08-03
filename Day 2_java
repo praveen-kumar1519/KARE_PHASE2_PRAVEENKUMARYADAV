@@ -1,0 +1,91 @@
+//----------------------------------------------------------------Welcome---------------------------------------------------
+class Main {
+    public static void main(String [] args) {
+        if (2 + 2 == 4)
+        System.out.println("welcome");
+        System.out.println("update your details");
+        else
+        System.out.println("thank you");
+    }
+}
+//---------------------------------------------------------------Even or Odd--------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int a = sc.nextInt();
+	    if(a%2==0)
+		System.out.print("Even Number");
+		else
+		System.out.print("Odd Number");
+	}
+}
+//----------------------------------------------------------------Equal or Not-------------------------------------------------------
+import java.util.*;
+class Main {
+    public static void main (String [] args) {
+        Scanner obj = new Scanner(System.in);
+        int a = obj.nextInt();
+        int b = obj.nextInt();
+        if(a==b)
+        System.out.println( a +" AND " + b  + " ARE EQUAL ");
+        else
+        System.out.println( a +" AND " + b + " ARE NOT EQUAL ") ;
+    }
+}
+//---------------------------------------------------------Eligible or Not to vote---------------------------------------------------------
+import java.util.*;
+class Main {
+    public static void main (String [] args) {
+        Scanner obj = new Scanner(System.in);
+        int age = obj.nextInt();
+        
+        if(age>=18)
+        System.out.println( age +" Eigible for vote" );
+        else
+        System.out.println( age +"Not Eligible for vote" ) ;
+    }
+}
+//------------------------------------------------------DIvisible by or not and remainder-------------------------------------------------
+import java.util.*;
+public class Main {
+    public static void main(String [] args) {
+        Scanner obj = new Scanner(System.in);
+        int num = obj.nextInt();
+        if (num % 3 == 0) 
+            System.out.println(num + "is divisible by 3");
+        else 
+        System.out.println(num + "is not divisible by 3");
+        System.out.println("remainder is" +(num % 3));
+        
+    }
+}
+//-----------------------------------------------------------------Leap Year or Not-------------------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int year = obj.nextInt();
+		if(year % 400 == 0 || year % 4 == 0 && year % 100 != 0)
+		System.out.println("Leap year");
+		else
+		System.out.println("Not a Leap year");
+	}
+}
+//----------------------------------------------------------------------------Time Valid or not-----------------------------------------------
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner obj = new Scanner(System.in);
+		int h = obj.nextInt();
+		int m = obj.nextInt();
+		int s = obj.nextInt();
+		if (h >= 0 && h <= 23 && m >= 0 && m <= 59 && s >= 0 && s <= 59)
+		    System.out.println("Valid");
+		else
+		System.out.println("Invalid");
+	}
+}
