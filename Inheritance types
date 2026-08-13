@@ -135,3 +135,49 @@ class Main {
     }
 }                                                                   //output : will be n factorial
 
+
+//------------------------------------------------------------Tail recursion--------------------------------------------------------
+import java.util.*;
+
+class Main {
+    static void fun(int n) {
+        if (n != 0) {
+            System.out.print(n + " ");
+            fun(n - 1);
+            fun(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        fun(n);
+    }
+}      
+
+//------------------------------------------------------------------Perfect cube ------------------------------------------
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int arr[] = new int[n];
+
+        int sum = 0, c = 0;
+
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+
+            if (arr[i] % 3 == 0 && arr[i] % 2 == 0) {
+                sum = sum + arr[i];
+                c++;
+            }
+        }
+
+        float avg = (float) sum / c;
+        System.out.printf("%.2f", avg);
+    }
+}
