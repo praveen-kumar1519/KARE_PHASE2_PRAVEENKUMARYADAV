@@ -1,0 +1,32 @@
+//-------------------------------------------------------------------- Class Bike-------------------------------------------------------------
+import java.util.*;
+class Bike
+{
+    Bike(){
+        System.out.print("Bike is started");
+    }
+    public static void main(String[] args){
+        Bike sc=new Bike();
+    }
+}                                             //output : Bike is started
+
+
+//-----------------------------------------------------------------Nested Collatz--------------------------------------------------------------
+
+
+class Main {
+    public static int s(int n) {
+        if (n <= 1)
+            return 1;
+
+        if (n % 2 == 0)
+            return s(s(n / 2));
+        else
+            return s(s(3 * n + 1));
+    }
+
+    public static void main(String[] args) {
+        int n = 6;
+        System.out.println("Nested Collatz result = " + s(n));
+    }
+}                                                             // output : 1
