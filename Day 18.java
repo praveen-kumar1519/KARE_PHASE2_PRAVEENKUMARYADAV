@@ -287,3 +287,90 @@ class Main{
     }
 }
 
+
+
+//---------------------------------------------------------------Queue Using Linked List----------------------------------------------------
+import java.util.*;
+class Node{
+    int data;
+    Node next;
+    Node(int data){
+        this.data = data;
+        this.next = null;
+    }
+}
+class Queue{
+    Node front, rear;
+    Queue(){
+        front = null;
+        rear = null;
+    }
+    void enqueue(int data){
+        Node newNode = new Node(data);
+        if(rear == null){
+            front = rear = newNode;
+            return;
+        }
+        rear.next = newNode;
+        rear = newNode;
+    }
+    int dequeue(){
+        if(front == null){
+            System.out.println("Queue is empty");
+            return -1;
+        }
+        int data = front.data;
+        front = front.next;
+        if(front == null){
+            rear = null;
+        }
+        return data;
+    }
+    void display(){
+        if(front == null){
+            System.out.println("Queue is empty");
+            return;
+        }
+        Node temp = front;
+        while(temp != null){
+            System.out.print(temp.data + " ");
+            temp = temp.next;
+        }
+        System.out.println();
+    }
+}
+class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        Queue q = new Queue();
+        while(true){
+            System.out.println("\n1. Enqueue");
+            System.out.println("2. Dequeue");
+            System.out.println("3. Display");
+            System.out.println("4. Exit");
+            System.out.print("Enter choice: ");
+            int choice = sc.nextInt();
+            switch(choice){
+                case 1:
+                    System.out.print("Enter the value to enqueue: ");
+                    int val = sc.nextInt();
+                    q.enqueue(val);
+                    break;
+                case 2:
+                    int removed = q.dequeue();
+                    if(removed != -1){
+                        System.out.println(removed);
+                    }
+                    break;
+                case 3:
+                    q.display();
+                    break;
+                case 4:
+                    System.out.println("Exiting");
+                    return;
+                default:
+                    System.out.println("Invalid choice");
+            }
+        }
+    }
+}
