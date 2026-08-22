@@ -1,0 +1,112 @@
+//program to create a ArrayList.
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		ArrayList obj=new ArrayList();
+		obj.add(10);
+		obj.add(20);
+		obj.add(30);
+		obj.add(2.5);
+		obj.add('G');
+		obj.add("Chandu");
+		System.out.print(obj);
+	}
+}
+
+Output:
+[10, 20, 30, 2.5, G, Chandu]
+
+
+//program to create a ArrayList with Integer datatype
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		ArrayList<Integer> obj=new ArrayList<>();
+		obj.add(10);
+		obj.add(20);
+		obj.add(30);
+		System.out.print(obj);
+	}
+}
+
+Output:
+[10, 20, 30]
+
+
+//program to create a ArrayList by taking the input from the user.
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		ArrayList<Integer> obj=new ArrayList<>();
+		Scanner sc = new Scanner(System.in);
+		int n=sc.nextInt();
+		for(int i=0;i<n;i++){
+		    obj.add(sc.nextInt());
+		}
+		System.out.print(obj);
+	}
+}
+
+Output:
+5
+1 2 3 4 5
+[1, 2, 3, 4, 5]
+
+
+//program for LinkedList
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc = new Scanner(System.in);
+		LinkedList obj=new LinkedList();
+		obj.add(10);
+		obj.add(20);
+		obj.add(30);
+		obj.add(2,100);
+		obj.addFirst(5);
+		obj.addLast(150);
+		System.out.println(obj.get(1));
+		System.out.println(obj.getFirst());
+		System.out.println(obj.getLast());
+		System.out.println(obj);
+		System.out.println("Enter the index and value:");
+		int index=sc.nextInt();
+		int value=sc.nextInt();
+		System.out.println(obj.set(index,value));
+		System.out.println(obj);
+		obj.remove();
+		System.out.println(obj);
+		obj.remove(1);
+		System.out.println(obj);
+		obj.removeLast();
+		System.out.println(obj);
+		System.out.println(obj.contains(100));
+		System.out.println(obj.size());
+		obj.clear();
+		System.out.println(obj.isEmpty());
+		System.out.println(obj.indexOf(5));
+		System.out.println(obj);
+	}
+}
+
+Output:
+10
+5
+150
+[5, 10, 20, 100, 30, 150]
+Enter the index and value:
+1 50
+10
+[5, 50, 20, 100, 30, 150]
+[50, 20, 100, 30, 150]
+[50, 100, 30, 150]
+[50, 100, 30]
+true
+3
+true
+-1
+[]
